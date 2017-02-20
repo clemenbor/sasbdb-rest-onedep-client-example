@@ -34,7 +34,8 @@ class OnedepAPIClient(object):
         return None
 
     """
-    Authenticate account against SASBDB and returns a new JWT token
+    Check and manage the JWT token for validity, and renew it if needed
+    JWT token is stored in a file locally. ( /home/<user>/.sasbdb_api/sasbdb_onedep_api_token.jwt )
     """
     def check_JWT_token(self, username, password):
         token = None
